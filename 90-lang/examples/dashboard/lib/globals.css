@@ -1,0 +1,35 @@
+/* 对应 v2: styling/02 设计令牌三层 + styling/03 暗色模式 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ① 全局令牌：原始调色板（无语义） */
+:root {
+  --color-blue-500: #1677ff;
+  --color-blue-600: #0958d9;
+  --color-gray-50: #f9fafb;
+  --color-gray-200: #e5e7eb;
+  --color-gray-500: #6b7280;
+  --color-gray-900: #111827;
+}
+
+/* ② 语义令牌：按用途命名（业务只用这层）—— 亮色 */
+:root {
+  --color-primary: var(--color-blue-500);
+  --color-bg: #ffffff;
+  --color-surface: var(--color-gray-50);
+  --color-text: var(--color-gray-900);
+  --color-muted: var(--color-gray-500);
+  --color-border: var(--color-gray-200);
+}
+
+/* 暗色模式：只覆盖语义层，全局层不动（对应 v2: styling/02 单一修改点） */
+.dark {
+  --color-primary: var(--color-blue-500);
+  --color-bg: var(--color-gray-900);
+  --color-surface: #1f2937;
+  --color-text: var(--color-gray-50);
+  --color-muted: #9ca3af;
+  --color-border: #374151;
+}

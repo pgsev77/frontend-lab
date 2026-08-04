@@ -119,9 +119,11 @@ TypeScript + React/Next.js 的真实代码（非伪代码）。
 ## 八、当前状态
 
 - [x] v2 总纲（本 README）
-- [ ] `nextjs/` 基础设施（进行中）
-- [ ] `react/` React 核心
-- [ ] `styling/` 样式方案
-- [ ] `state/` 状态层
-- [ ] `engineering/` 工程化
-- [ ] `examples/` 实战串联
+- [x] `nextjs/` 基础设施（5 篇）
+- [x] `react/` React 核心（4 篇）
+- [x] `styling/` 样式方案（3 篇）
+- [x] `state/` 状态层（3 篇）
+- [x] `engineering/` 工程化（3 篇）
+- [x] `examples/` 实战串联（Dashboard 示例 + KNOWLEDGE-MAP）
+
+**v2 全部完成（18 篇笔记 + 1 个可运行示例项目）。**
