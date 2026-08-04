@@ -5,47 +5,47 @@
 ## 本支柱解决什么问题
 路由看似只是"点链接跳页面"，实则是状态轴的重要一环：**URL 是可分享、可刷新、可后退的状态**。本支柱回答：**路由模型怎么工作、嵌套路由与布局怎么组织、URL 怎么当状态用、代码分割怎么配合路由**。
 
-## 详细大纲（→ 待填充原子笔记内容）
+## 详细大纲（→ 点击标题阅读）
 
-### 1. 路由模型（Routing Model）
+### [1. 路由模型](./routing-model.md)
 - 客户端路由 vs 服务端路由（多页应用 vs 单页应用）
 - History API（pushState/replaceState/popstate）
 - Hash 路由 vs Browser 路由（为什么现在都用 Browser 路由）
 - 路由匹配（路径参数 /search/:id、通配符、查询参数）
 
-### 2. 嵌套路由与布局（Nested Routes & Layout）
+### [2. 嵌套路由与布局](./nested-routes-layout.md)
 - 为什么需要嵌套（页面共享布局：导航/侧栏/页脚）
 - 嵌套路由的渲染：父路由渲染 layout，子路由渲染到 `<Outlet/>`
 - 布局持久化（切换子路由时父布局不重渲染/不卸载）
 - 路由层级的副作用与生命周期
 
-### 3. 数据路由（Data Routing / Loaders & Actions）
+### [3. 数据路由](./data-routing.md)
 - 新一代路由的范式：路由不只是"显示哪个组件"，还管"加载什么数据、提交什么 action"
 - loader：进入路由前并行加载数据（解决请求瀑布）
 - action：表单提交/数据变更，配合 loader 自动重新验证
 - Remix/Next.js App Router 的数据路由模型
 - → 与 [01-6 数据获取](../01-6-data-fetching/README.md) 的关系：路由层获取 vs 组件层获取
 
-### 4. URL 即状态（URL as State）
+### [4. URL 即状态](./url-as-state.md)
 - 哪些状态该放进 URL：当前页码、筛选条件、排序、Tab、搜索关键词、展开折叠
 - 放进 URL 的好处：可分享、可刷新、可后退、可收藏
 - 查询参数 vs 路径参数（/search?q=x vs /search/x）
 - URL 状态与全局状态（Redux）的边界——能用 URL 就别用 store
 - → 呼应 [01-5 状态分类](../01-5-state-management/README.md)
 
-### 5. 代码分割与懒加载（Code Splitting）
+### [5. 代码分割与懒加载](./code-splitting.md)
 - 为什么按路由分割（首屏只加载首页代码）
 - 路由级 lazy loading（React.lazy / dynamic import）
 - 分割与预取的配合（悬停/空闲时预取下一页）
 - 分割的代价（额外请求、瀑布）与权衡
 
-### 6. 导航体验
+### [6. 导航体验](./navigation-ux.md)
 - 路由切换的过渡（过渡动画、骨架屏）
 - 导航中的数据加载态（pending state）
 - 滚动恢复（scroll restoration）：后退时回到原位置
 - 错误路由（404）与重定向
 
-### 7. 编程式导航
+### [7. 编程式导航](./programmatic-navigation.md)
 - 命令式导航（navigate/redirect）
 - 导航拦截（beforeunload、离开页面确认）
 - 深层链接与回退栈管理
