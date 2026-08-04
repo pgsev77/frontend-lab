@@ -5,37 +5,37 @@
 ## 本支柱解决什么问题
 界面不是凭空出现的，它最终都落到 **HTML 文档结构 + CSS 视觉规则**。本支柱回答：**怎么用语义化的结构描述界面、怎么用 CSS 盒模型与布局体系排版、层叠与特异性如何决定样式优先级**。这是所有框架的运行底座。
 
-## 详细大纲（→ 待填充原子笔记内容）
+## 详细大纲（→ 点击标题阅读）
 
-### 1. HTML 语义化（Semantic HTML）
+### [1. HTML 语义化](./semantic-html.md)
 - 为什么语义化重要（可访问性、SEO、可维护性）
 - 文档大纲与语义标签（header/nav/main/article/section/aside/footer）
 - 语义化 vs div 满天飞
 
-### 2. DOM 模型
+### [2. DOM 模型](./dom-model.md)
 - DOM 是什么（文档对象模型，HTML 的内存表示）
 - DOM 树、节点类型、DOM 操作的成本（为什么直接操作 DOM 慢）
 - DOM 与 JS 的桥梁（→ 引出虚拟 DOM 的动机，详见 01-4）
 
-### 3. CSS 盒模型（Box Model）
+### [3. CSS 盒模型](./box-model.md)
 - content / padding / border / margin
 - `box-sizing: border-box` vs `content-box`
 - 外边距合并等坑
 
-### 4. 布局体系
+### [4. 布局体系](./layout-systems.md)
 - 正常文档流（block / inline / inline-block）
 - ★ Flexbox（一维布局：主轴/交叉轴、对齐、伸缩）
 - ★ Grid（二维布局：行列、区域、显式/隐式）
 - 定位（static/relative/absolute/fixed/sticky）
 - 脱离文档流的代价
 
-### 5. 层叠与特异性（Cascade & Specificity）
+### [5. 层叠与特异性](./cascade-specificity.md)
 - 层叠规则（源顺序、重要性、特异性、层叠层 @layer）
 - 特异性计算（ID/类/元素的选择器权重）
 - 为什么样式"不生效"——90% 是特异性或层叠问题
 - 现代 CSS 架构如何规避特异性战争（→ 详见 01-3 样式）
 
-### 6. 视口与坐标
+### [6. 视口与坐标](./viewport-coordinates.md)
 - viewport、设备像素 vs CSS 像素、DPR
 - 元素尺寸与位置（offsetWidth/clientWidth/getBoundingClientRect）
 - 滚动与坐标系（→ 滚动性能、虚拟列表的基础）
