@@ -7,16 +7,16 @@
 
 > 这里是 [00-4 需求生命周期](../00-foundation/requirement-lifecycle.md) 的完整落地。
 
-## 详细大纲（→ 待填充原子笔记内容）
+## 详细大纲（→ 点击标题阅读）
 
-### 1. 需求澄清与技术方案（前端 RFC）
+### [1. 需求澄清与技术方案](./requirement-rfc.md)
 - 需求澄清：功能 + ★ 非功能需求（兼容范围/性能/可访问性/多端）+ 验收标准
 - 设计稿走查：可实现性质疑、交互细节确认、边界状态（空/错/加载）
 - 组件拆分图与状态架构设计（★ 前端特有的关键步）
 - 接口契约：与后端对齐字段/类型/错误码，契约先行 + Mock
 - RFC 结构（设计/状态架构/接口契约/性能与兼容/风险回滚/测试策略）
 
-### 2. 构建、部署与发布
+### [2. 构建、部署与发布](./build-deploy-release.md)
 - 构建产物：打包、代码分割、压缩、缓存指纹（hash）
 - 部署方式：静态托管 / CDN / Node 服务（SSR）
 - 缓存策略：HTML 不缓存 + 资源长缓存（hash 指纹）
@@ -24,7 +24,7 @@
 - 回滚预案：静态资源可秒级回滚，SSR 需要版本管理
 - → 构建基础见 [01-12](../01-pillars/01-12-architecture-engineering/README.md)
 
-### 3. 测试策略
+### [3. 测试策略](./testing-strategy.md)
 - 前端测试金字塔：单元（工具/Hook）多 / 组件中 / E2E 少
 - 组件测试：测行为不测实现（Testing Library 的哲学）
 - E2E 测试：关键用户流程（登录/下单/核心路径）
@@ -33,7 +33,7 @@
 - 覆盖率的正确态度
 - → 测试基础见 [01-13](../01-pillars/01-13-observability-quality/README.md)
 
-### 4. CI/CD、评审与复盘
+### [4. CI/CD、评审与复盘](./cicd-review-retrospective.md)
 - CI/CD 流水线：lint / 类型检查 / 测试 / 构建 / 部署
 - 质量门禁：Lighthouse CI、bundle 体积预算、a11y 检查
 - 设计走查（还原度、交互、边界态）与代码评审（清单化）
@@ -41,7 +41,7 @@
 - 无指责复盘（Blameless Postmortem）、5 Whys
 - 前端事故的典型模式（白屏/样式错乱/内存泄漏）
 
-### 5. 前后端协作
+### [5. 前后端协作](./frontend-backend-collab.md)
 - 接口契约的维护（OpenAPI / TypeScript 类型共享）
 - Mock 与联调：MSW / Mock Server / 契约测试
 - BFF（Backend for Frontend）边界：前端专属聚合层 vs 后端通用 API
