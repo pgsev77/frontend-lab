@@ -5,9 +5,9 @@
 ## 本支柱解决什么问题
 前端最常见的混乱根源是**状态管理失控**：状态散落在各组件、来源不清、同步混乱。本支柱回答：**状态有哪些类型、该放在哪、全局状态怎么管、什么时候该用状态机、状态架构怎么设计**。这是 [两条主轴](../../00-foundation/two-axes.md) 中状态轴的中枢。
 
-## 详细大纲（→ 待填充原子笔记内容）
+## 详细大纲（→ 点击标题阅读）
 
-### 1. 状态分类（★ 最重要的一步）
+### [1. 状态分类](./state-classification.md)
 - **UI 状态**：当前选中的 Tab、弹窗开关、输入焦点（前端自管）
 - **服务端状态**：用户列表、订单详情（后端拥有，前端缓存）→ 详见 01-6
 - **URL 状态**：当前路由、查询参数、筛选条件（应放进 URL，可分享可刷新）→ 详见 01-7
@@ -15,38 +15,38 @@
 - **临时状态**：当前操作中的表单（提交后即弃）
 - 为什么"状态分类"是状态管理的第一步（→ 呼应 00-2 权衡：客户端 vs 服务端状态）
 
-### 2. 单向数据流（Unidirectional Data Flow）
+### [2. 单向数据流](./unidirectional-flow.md)
 - 为什么是单向（可预测、可追踪、易调试）
 - Flux/Redux 模型：action → reducer → state → view
 - 单向数据流 vs 双向绑定（v-model）的权衡
 
-### 3. 全局状态方案
+### [3. 全局状态方案](./global-state-solutions.md)
 - Context（React 内置，适合低频中粒度）
 - Redux（可预测、可追踪、有中间件生态，但样板多）
 - Zustand/Jotai/Recoil（轻量、原子化、Hooks 友好）
 - Pinia（Vue 的现代状态方案）
 - 各方案的核心差异与选型
 
-### 4. 状态的粒度与订阅
+### [4. 状态粒度与订阅](./state-subscription.md)
 - 全局 store 订阅整个 → 无谓重渲染
 - 选择器（selector）/ 原子状态（atom）：只订阅需要的部分
 - 状态派生（derived state）：用 selector 计算而非冗余存储
 - 派生状态的缓存（reselect/memoize）
 
-### 5. 状态机（State Machine）
+### [5. 状态机](./state-machine.md)
 - 为什么很多状态本质是"状态机"（有限个状态 + 明确的流转）
 - 显式状态机 vs 散落的布尔标志（isLoading && !isError && ...）
 - XState / useReducer 的状态机思维
 - 状态机让复杂交互变得可预测、可可视化
 
-### 6. 状态架构（State Architecture）
+### [6. 状态架构](./state-architecture.md)
 - 状态提升（lifting state up）：共享状态放共同祖先
 - 状态下沉：只在局部用的状态不下放到全局
 - 哪些状态该全局、哪些该局部、哪些该 URL、哪些该服务端
 - "状态从哪来、归谁管"的决策树
 - → 完整架构讨论见 [01-12](../01-12-architecture-engineering/README.md)
 
-### 7. 副作用管理
+### [7. 副作用管理](./side-effects.md)
 - 状态变化的副作用（发请求、写日志、改 URL）
 - useEffect 的本质与坑（依赖数组、清理函数、竞态）
 - 副作用与状态更新的时序
