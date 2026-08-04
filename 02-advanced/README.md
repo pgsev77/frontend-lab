@@ -5,9 +5,9 @@
 ## 本模块解决什么问题
 当应用变大、性能要求变高、交互变复杂，SPA 的基础方案就不够了。本模块回答：**要不要上 SSR、大型应用怎么不失控、性能怎么榨到极致、复杂交互怎么实现**。
 
-## 详细大纲（→ 待填充原子笔记内容）
+## 详细大纲（→ 点击标题阅读）
 
-### 1. 服务端渲染与同构（SSR / SSG / ISR / RSC）
+### [1. 服务端渲染与同构](./ssr-isomorphic.md)
 - 为什么需要 SSR（SEO、首屏、首字节）—— SPA 的根本局限
 - CSR（客户端渲染）vs SSR（服务端渲染）vs SSG（静态生成）vs ISR（增量静态再生）
 - 同构（Isomorphic）：同一份代码跑在服务端和客户端
@@ -16,7 +16,7 @@
 - Next.js App Router 的渲染模型
 - 流式渲染（Streaming SSR）与 Suspense
 
-### 2. 大型应用架构
+### [2. 大型应用架构](./large-app-architecture.md)
 - 状态架构的演进（从 Context 到分层 store）
 - 微前端（Micro Frontend）：独立部署的子应用组合
 - 模块联邦（Module Federation）：运行时共享模块
@@ -24,14 +24,14 @@
 - 分包策略与公共依赖管理
 - → 基础架构见 [01-12](../01-pillars/01-12-architecture-engineering/README.md)
 
-### 3. 性能极致优化
+### [3. 性能极致优化](./performance-extreme.md)
 - 首屏极致优化（预渲染、边缘计算、RSC）
 - 资源加载策略（HTTP/2 推送、Resource Hints、CDN 策略）
 - 缓存层级（浏览器/CDN/Service Worker/内存）
 - 运行时极致（虚拟列表、Web Worker、WASM）
 - → 基础性能见 [01-9](../01-pillars/01-9-performance-ux/README.md)
 
-### 4. 复杂交互模式
+### [4. 复杂交互模式](./complex-interaction.md)
 - 虚拟列表（Virtual List）：渲染上万条数据
 - 拖拽（Drag & Drop）：自定义拖拽与 HTML5 DnD API
 - 撤销重做（Undo/Redo）：命令模式与状态历史
