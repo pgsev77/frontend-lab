@@ -1,0 +1,19 @@
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.iml
+
+# ZCode 工作区
+.zcode/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 依赖与构建产物（示例项目用）
+node_modules/
+dist/
+build/
+.next/
+.cache/
+*.log
