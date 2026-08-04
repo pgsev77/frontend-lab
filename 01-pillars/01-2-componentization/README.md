@@ -5,41 +5,41 @@
 ## 本支柱解决什么问题
 前端规模化的核心解法就是**组件化**。本支柱回答：**组件模型是什么、怎么拆组件、组合优于继承、受控与非受控怎么选、怎么用设计系统把复用做到极致**。这是 [复杂度来源 3（规模化组织）](../../00-foundation/complexity-sources.md) 的直接应对。
 
-## 详细大纲（→ 待填充原子笔记内容）
+## 详细大纲（→ 点击标题阅读）
 
-### 1. 组件模型（Component Model）
+### [1. 组件模型](./component-model.md)
 - 什么是组件（props 输入 → 视图输出，纯函数直觉）
 - props / children / 插槽
 - 组件的边界：什么时候该拆、什么时候不该拆
 
-### 2. 组合优于继承（Composition over Inheritance）
+### [2. 组合优于继承](./composition-over-inheritance.md)
 - 为什么前端不用继承组织组件
 - 组合模式：children / render props / HOC / hooks
 - 各组合模式的演进与权衡（render props vs HOC vs hooks）
 
-### 3. 受控 vs 非受控（Controlled vs Uncontrolled）
+### [3. 受控 vs 非受控](./controlled-uncontrolled.md)
 - 受控组件：状态由父组件持有，子组件纯展示
 - 非受控组件：状态自管，父组件通过 ref 取值
 - 何时用哪种（表单的典型选择，→ 详见 01-8）
 
-### 4. 组件分类
+### [4. 组件分类](./component-classification.md)
 - 展示组件（Presentational）：只管 UI，不管数据
 - 容器组件（Container）：管数据获取与状态，组合展示组件
 - 复合组件（Compound）：如 Select/Option、Tabs/Tab，通过 context 协作
 - 自定义 Hook：把"逻辑"也从组件里抽出来复用
 
-### 5. 组件 API 设计
+### [5. 组件 API 设计](./component-api.md)
 - props 设计原则（少而正交、合理默认值、避免 prop 蔓延）
 - 受控/非受控双模式 API
 - 组件的"契约"：输入输出、副作用边界
 
-### 6. 设计系统（Design System）
+### [6. 设计系统](./design-system.md)
 - 为什么需要设计系统（一致性、复用、协作）
 - 设计令牌（Design Token：颜色/间距/字号/圆角的统一变量）
 - 组件库 vs 设计系统（组件库是设计系统的代码实现）
 - 主题化与暗色模式（→ 详见 01-3）
 
-### 7. 组件的复用陷阱
+### [7. 复用陷阱](./reuse-pitfalls.md)
 - 过度抽象：为"将来可能复用"提前抽象（YAGNI）
 - 过度通用：一个组件吃所有 props，变成"上帝组件"
 - 复用与定制的权衡（开放插槽 vs 配置项爆炸）
